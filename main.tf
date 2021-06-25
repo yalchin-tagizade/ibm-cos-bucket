@@ -45,7 +45,7 @@ resource "ibm_cos_bucket" "standard-ams03" {
 }
 
 resource "ibm_cos_bucket" "lifecycle_rule_cos" {
-  bucket_name          = var.bucket_name
+  bucket_name          = "A"var.bucket_name
   resource_instance_id = ibm_resource_instance.cos_instance.id
   region_location      = var.regional_loc
   storage_class        = var.storage
@@ -71,7 +71,7 @@ resource "ibm_cos_bucket" "lifecycle_rule_cos" {
 }
 
 resource "ibm_cos_bucket" "cos_bucket" {
-  bucket_name           = var.bucket_name
+  bucket_name           = "B"var.bucket_name
   resource_instance_id  = ibm_resource_instance.cos_instance.id
   region_location       = var.regional_loc
   storage_class         = var.storage
